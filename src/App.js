@@ -8,7 +8,7 @@ import {
 import Home from "./containers/Home";
 
 import Navigation from './containers/Navigation'
-import Projects from './components/Projects'
+import Project from './containers/ProjectDetail'
 import Footer from './containers/Footer'
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
       <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/project:id" element={<Projects />} />
+          <Route path="/project:id" element={<Project />} />
         </Routes>
       <Footer />
     </BrowserRouter>
