@@ -5,8 +5,8 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import Home from "./containers/Home";
 
+import Home from "./containers/Home";
 import Navigation from './containers/Navigation'
 import Project from './containers/ProjectDetail'
 import Footer from './containers/Footer'

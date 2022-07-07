@@ -7,7 +7,25 @@ import Contact from '../../components/Contact'
 
 function Home() {
   return (
-    <div>Home</div>
+    <>
+        <Header />
+
+        <main>
+            <section>
+                <Projects />
+            </section>
+
+            <section>
+                <Skills />
+            </section>
+
+            <section>
+                <Contact />
+            </section>
+
+        </main>
+
+    </>
   )
 }
 
