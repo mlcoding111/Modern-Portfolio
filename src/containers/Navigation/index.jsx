@@ -33,6 +33,10 @@ export const NavigationWrap = styled.nav`
     .brand{
       display: flex;
       align-items: center;
+
+    }
+    .brand h1{
+      font-size: 1.6rem !important;
     }
     
     .brand svg{

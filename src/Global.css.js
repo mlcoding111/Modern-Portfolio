@@ -47,4 +47,9 @@ body {
   background-attachment: fixed;
 }
 
+h1{
+  font-size: 4rem;
+  letter-spacing: 20.5%;
+}
+
 `

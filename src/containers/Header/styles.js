@@ -42,6 +42,7 @@ export const Header = styled.header`
   }
   
   .hero-text #profession{
+    letter-spacing: 0px !important;
     margin-top: auto;
     margin-bottom: .5em;
     font-size: 4rem;
