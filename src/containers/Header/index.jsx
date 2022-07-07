@@ -3,7 +3,7 @@ import styled from 'styled-components'
 function Header() {
   return (
     <>
-      <header>
+      <HeaderWrap>
 
         <div className="hero-img">
 
@@ -51,12 +51,16 @@ function Header() {
 
         </div>
 
-      </header>
+      </HeaderWrap>
     </>
   )
 }
 
 export default Header
+
+export const HeaderWrap = styled.header`
+  
+`
 
 export const SkillCard = styled.div`  
   background: ${props => props.red ? props.theme.secondary : "#282828"}
