@@ -57,9 +57,6 @@ function Header() {
               <button>My skills</button>
             </div>
         </div>
-
-
-
       </HeaderWrap>
     </>
   )
