@@ -48,8 +48,17 @@ function Header() {
         </div>
 
         <div className="stats-display">
+            <div>
+              <span id="year">3</span>
+              <p>Years of Experiences</p>
+            </div>
 
+            <div>
+              <button>My skills</button>
+            </div>
         </div>
+
+
 
       </HeaderWrap>
     </>
