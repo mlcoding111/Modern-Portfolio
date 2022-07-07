@@ -29,7 +29,22 @@ function Header() {
         </div>
 
         <div className="skills-display">
-          <SkillCard red>s</SkillCard>
+          <SkillCard>
+            <h3>Front End</h3>
+            <p>Skilled using recent technologies to take any layout to life</p>
+          </SkillCard>
+
+          <SkillCard red>
+            <h3>Web Design</h3>
+            <p>Create design using tools like figma</p>
+
+          </SkillCard>
+
+          <SkillCard>
+            <h3>Back-End</h3>
+            <p>Setup NodeJs server and database structure</p>
+          </SkillCard>
+
         </div>
 
         <div className="stats-display">

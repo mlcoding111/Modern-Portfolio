@@ -33,10 +33,18 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
+body,html, #root{
+  min-height: 100%;
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
-  color: ${props => (props.darkMode ? 'white' : 'black')};
+  color: #fff;
+  background: #0C0C0C;
+  font-family: 'Poppins', sans-serif;
+  background-attachment: fixed;
 }
 
 `
