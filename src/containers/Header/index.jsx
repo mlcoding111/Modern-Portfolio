@@ -1,5 +1,5 @@
 import React from 'react'
-
+import styled from 'styled-components'
 function Header() {
   return (
     <>
@@ -25,11 +25,11 @@ function Header() {
             <button>Contact</button>
             <button>Resume</button>
           </div>                    
-          
+
         </div>
 
-        <div className="skill-display">
-
+        <div className="skills-display">
+          <SkillCard red>s</SkillCard>
         </div>
 
         <div className="stats-display">
@@ -42,3 +42,7 @@ function Header() {
 }
 
 export default Header
+
+export const SkillCard = styled.div`  
+  background: ${props => props.red ? props.theme.secondary : "#282828"}
+`
