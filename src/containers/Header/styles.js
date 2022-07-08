@@ -3,47 +3,63 @@ import styled from 'styled-components'
 
 export const SkillCard = styled.div`
   padding: 6em 2em;
+  @media (max-width: 940px){
+    padding: 3em 1em;
+  }
   background: ${(props) => (props.red ? props.theme.secondaryOp : "rgba(40, 40, 40, .8)")};
   h2{
     margin-bottom: 15px;
   }
 `;
+
 // clamp([value-min], [value-preferred], [value-max]);
 export const Header = styled.header`
   margin: 0 auto;
   width: clamp(200px, 90vw, 100%);
   border: 1px solid red;
   min-height: 85vh;
-  
-  padding: 4em 0;
-  
+  padding-block: min(15vh, 9rem);
+  padding-inline: min(8em, 2em);
+
   .hero{
-    padding: 0 4em;  // Change it for mobile
-    display: flex;
+    // Change it for mobile
+    display: flex;    
     flex-wrap: wrap;    
     /* display: grid;
     gap: 1em;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); // replace 1fr for auto when image will be uploaded */
   }
-  
+
+  @media (max-width: 940px){
+    padding-block: min(15vh, 1rem);
+    padding-inline: .5em;
+    .hero{
+      flex-direction: column;
+    }    
+  }
+    
   .hero > * {
     border: 1px solid white;
-    padding: 3em; // Change it for mobile
+    padding-block: min(10vh, 2rem);
+    padding-inline: 2em;
     flex: 1 1 10em;
   }
 
   .hero-description{
     flex: 2;
+  }  
+  .hero-button{
+    display: flex;
   }
-  
-
   .hero-button > *{
-    padding: 1em 2em;
-    margin: 3em .5em;
+    padding-block: min(20vh, .5rem);
+    padding-inline: min(8em, 2em);
+    /* padding: 1em 2em; */
+    margin: 0em 0.5em;
   }
 
   .hero-text{
-    padding-top: 5em;
+    padding-block: min(10vh, 3rem);
   }
 
   .hero-text .description{

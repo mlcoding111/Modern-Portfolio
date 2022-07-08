@@ -60,4 +60,9 @@ export const PrimaryNav = styled.ul`
     background: ${props => props.theme.secondary};
     cursor: pointer;
   }
+
+  // Hide nav
+  @media (max-width: 500px){    
+    display: none;
+  }
 `
