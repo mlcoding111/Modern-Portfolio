@@ -1,5 +1,6 @@
 import React from "react";
 import * as Styled from './styles.js'
+import { Button } from "../../styles/styles.js";
 
 function Header() {
   return (
@@ -34,7 +35,7 @@ function Header() {
 
             <Styled.SkillCard>
               <div>
-                <h3>Front End</h3>
+                <h2>Front End</h2>
                 <p>
                   Skilled using recent technologies to take any layout to life
                 </p>
@@ -44,14 +45,14 @@ function Header() {
             <Styled.SkillCard red>
               <div>
                 {" "}
-                <h3>Web Design</h3>
+                <h2>Web Design</h2>
                 <p>Create design using tools like figma</p>
               </div>
             </Styled.SkillCard>
 
             <Styled.SkillCard>
               <div>
-                <h3>Back-End</h3>
+                <h2>Back-End</h2>
                 <p>Setup NodeJs server and database structure</p>
               </div>
             </Styled.SkillCard>
@@ -64,7 +65,7 @@ function Header() {
             </div>
 
             <div>
-              <button>My skills</button>
+              <Button>My Skills</Button>
             </div>
         </div>
 

@@ -6,7 +6,8 @@ import GlobalCss from './Global.css';
 
 
 const theme = {
-  secondary: "#D72323" 
+  secondary: "#D72323" ,
+  secondaryOp: "rgba(215, 35, 35, 0.8)"
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

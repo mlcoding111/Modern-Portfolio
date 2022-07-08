@@ -1,5 +1,14 @@
 import styled from 'styled-components'
 
+
+export const SkillCard = styled.div`
+  padding: 6em 2em;
+  background: ${(props) => (props.red ? props.theme.secondaryOp : "rgba(40, 40, 40, .8)")};
+  h2{
+    margin-bottom: 15px;
+  }
+`;
+
 export const Header = styled.header`
   margin: 0 auto;
   max-width: 90%;
@@ -86,7 +95,3 @@ export const Header = styled.header`
 
 `;
 
-export const SkillCard = styled.div`
-  padding: 4em 1em;
-  background: ${(props) => (props.red ? props.theme.secondary : "#282828")};
-`;
