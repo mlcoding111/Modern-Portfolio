@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 
 export const SkillCard = styled.div`
-  padding: 6em 2em;
+  margin-top: 5% !important;
+  padding: 5em 2em;
   @media (max-width: 940px){
     padding: 3em 1em;
   }
@@ -12,8 +13,23 @@ export const SkillCard = styled.div`
   }
 `;
 
+export const StickyBox = styled.div`
+  position: absolute;
+  overflow-y: visible;
+  top: 42%;
+  left: -15%;
+  height: 750px;
+  width: clamp(150px, 60vw, 1000px);
+  background: #1B1B1B;
+  opacity: 0.8;
+  @media (max-width: 1200px){
+    display: none;
+  }
+`
+
 // clamp([value-min], [value-preferred], [value-max]);
 export const Header = styled.header`
+  position: relative;
   margin: 0 auto;
   width: clamp(200px, 90vw, 100%);
   border: 1px solid red;

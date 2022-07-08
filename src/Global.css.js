@@ -73,7 +73,7 @@ h1{
 }
 
 h2{
-  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
 }
 
 button{

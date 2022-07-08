@@ -1,12 +1,13 @@
 import React from "react";
 import * as Styled from './styles.js'
 import { Button } from "../../styles/styles.js";
+import { StickyBox } from "./styles.js";
 
 function Header() {
   return (
     <>
       <Styled.Header>
-
+        <StickyBox />
         <div className="hero">
 
           <div className="hero-img"></div>
