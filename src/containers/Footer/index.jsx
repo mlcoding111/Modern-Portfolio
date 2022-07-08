@@ -23,5 +23,11 @@ export default Footer
 
 
 export const FooterWrap = styled.footer`
+  display: grid;
+  width: 100%;
+  border: 1px solid red;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
   
 `

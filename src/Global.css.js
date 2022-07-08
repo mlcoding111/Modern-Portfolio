@@ -58,9 +58,19 @@ main{
   margin-inline: auto;
 }
 
+ul{
+  list-style: none;
+}
+
+
+/* TYPOGRAPHY */
+
+// clamp([value-min], [value-preferred], [value-max]);
+
 h1{
   font-size: 4rem;
   letter-spacing: 20.5%;
 }
+
 
 `
