@@ -17,6 +17,7 @@ export const SkillCard = styled.div`
 export const StickyBox = styled.div`
   position: absolute;
   overflow-y: visible;
+  z-index: -1;
   top: 42%;
   left: -15%;
   height: 750px;
