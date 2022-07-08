@@ -8,14 +8,14 @@ export const SkillCard = styled.div`
     margin-bottom: 15px;
   }
 `;
-
+// clamp([value-min], [value-preferred], [value-max]);
 export const Header = styled.header`
   margin: 0 auto;
-  max-width: 90%;
+  width: clamp(200px, 90vw, 100%);
   border: 1px solid red;
   min-height: 85vh;
+  
   padding: 4em 0;
-
   
   .hero{
     padding: 0 4em;  // Change it for mobile
@@ -54,7 +54,6 @@ export const Header = styled.header`
     letter-spacing: 0px !important;
     margin-top: auto;
     margin-bottom: .5em;
-    font-size: 4rem;
   }
 
   .hero-text #my-name{

@@ -68,8 +68,16 @@ ul{
 // clamp([value-min], [value-preferred], [value-max]);
 
 h1{
-  font-size: 4rem;
+  font-size: clamp(2rem, 4vw, 4rem);
   letter-spacing: 20.5%;
+}
+
+h2{
+  font-size: clamp(1.3rem, 3vw, 2rem);
+}
+
+p{
+  font-size: clamp(.8rem, 1vw, 1rem);
 }
 
 
