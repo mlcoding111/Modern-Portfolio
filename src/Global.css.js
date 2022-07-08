@@ -47,6 +47,12 @@ body {
   background-attachment: fixed;
 }
 
+main{
+  padding-block: 2rem;
+  width: min(95%, 75rem);
+  margin-inline: auto;
+}
+
 h1{
   font-size: 4rem;
   letter-spacing: 20.5%;
