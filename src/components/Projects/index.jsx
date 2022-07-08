@@ -33,17 +33,16 @@ const data = [
 function Projects() {
 
   return (
+    
     <ProjectsCardWrap>
       <h1>Recent Projects</h1>
       <ul className="projects-list">
         {data.map((item, key) => (
-          <li>
-            <ProjectCard title={item.title} year={item.year} link={item.link} speed={key + 2}/>
+          <li key={key}>
+            <ProjectCard title={item.title} year={item.year} link={item.link} speed={key + 2} />
           </li>
         ))}
       </ul>
-          
-      {/* Map trough ProjectCard here */}
     </ProjectsCardWrap>
   );
 }

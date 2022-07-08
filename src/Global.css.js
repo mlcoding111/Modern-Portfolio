@@ -33,9 +33,8 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-body,html, #root{
-  min-height: 100%;
-  height: 100%;
+#root, body, html{
+    min-height: 100% !important;
 }
 
 section{

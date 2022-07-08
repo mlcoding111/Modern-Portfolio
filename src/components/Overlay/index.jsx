@@ -1,44 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 
-import { motion, useViewportScroll } from "framer-motion";
-
+import {
+  motion,
+  useViewportScroll,
+  useSpring,
+  useTransform
+} from "framer-motion";
 
 function Overlay() {
+
   const { scrollYProgress } = useViewportScroll();
-  
-  const border = {
-    hidden: {
-      opacity: 0,
-      pathLength: 0,
-      fill: "rgba(255, 255, 255, 0)",
-    },
-    visible: {
-      opacity: 1,
-      pathLength: 1,
-      fill: "rgba(255, 255, 255, 0)",
-    },
-  };
+  const yRange = useTransform(scrollYProgress, [0, 0.9], [0, 1]);
+  const pathLength = useSpring(yRange, { stiffness: 400, damping: 90 });
 
-  const text = {
-    hidden: {
-        opacity: 0,
-        pathLength: 0
-    },
-    visible: {
-        opacity: 1,
-        pathLength: 1,
-        // fill: "rgba(255, 255, 255, 1)",
-    }
-  }
-
-  React.useEffect(()=>{
-    console.log(scrollYProgress)
-  }, [scrollYProgress])
-  
+  React.useEffect(() => yRange.onChange(v => console.log(v)), [yRange]);
   return (
     <Wrap>
-
+      
     </Wrap>
   );
 }
@@ -46,7 +25,8 @@ function Overlay() {
 export default Overlay;
 
 export const Wrap = styled(motion.div)`
-    position: fixed;
+    top: 0;
+    position: sticky;
     width: 100%;
     height: 15px;
     background: transparent;
