@@ -11,10 +11,15 @@ import Navigation from './containers/Navigation'
 import Project from './containers/ProjectDetail'
 import Footer from './containers/Footer'
 
+import ScrollIndicator from "./components/ScrollIndicator";
+import Overlay from "./components/Overlay";
+
 function App() {
   return (
     <BrowserRouter>
       <Navigation />
+      <ScrollIndicator />
+      <Overlay />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/project:id" element={<Project />} />
@@ -23,5 +28,4 @@ function App() {
     </BrowserRouter>
   );
 }
-
 export default App;
