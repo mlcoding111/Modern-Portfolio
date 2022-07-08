@@ -38,6 +38,11 @@ body,html, #root{
   height: 100%;
 }
 
+section{
+  padding: 2em;
+  min-height: 50vh;
+}
+
 body {
   margin: 0;
   padding: 0;

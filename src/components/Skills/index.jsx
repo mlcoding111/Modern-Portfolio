@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Button } from '../../styles/styles'
 
 function Skills() {
   return (
@@ -9,7 +10,7 @@ function Skills() {
         <span>My skills</span>
       </SectionHeader>
 
-      <button>Toggle button</button>
+      {/* <Button>Down Arrow here</Button> */}
     </SkillsWrap>
   )
 }
@@ -21,5 +22,5 @@ export const SectionHeader = styled.div`
 `
 
 export const SkillsWrap = styled.div`
-  
+  text-align: center;
 `
