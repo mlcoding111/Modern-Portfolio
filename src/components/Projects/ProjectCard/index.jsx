@@ -5,11 +5,13 @@ function ProjectCard({title, year, link}) {
 
   return (
     <Card>
-        <img src="https://picsum.photos/500" />
-        <div className="overlay">
-          <div className="text">
-            <h2>Project</h2>
-          </div>
+        <div className="img-container">
+          <img src="https://picsum.photos/500" />
+          <div className="overlay">
+            <div className="text">
+              <h2>Project</h2>
+            </div>
+          </div>                  
         </div>
         <h3>{title}</h3>
     </Card>
@@ -19,11 +21,17 @@ function ProjectCard({title, year, link}) {
 export default ProjectCard
 
 export const Card = styled.div`
-position: relative;
+.img-container{
+  position: relative;
+  transition: all 0.5s;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
 img{
   display: block;
   width: 100%;
-  height: auto;
+  transition: .5s all ease-in-out;
 }
 
 .overlay{
@@ -32,12 +40,13 @@ img{
   bottom: 0;
   left: 0;
   right: 0;
-  height: 95%;
+  height: 100%;
   width: 100%;
   opacity: 0;
   transition: .5s ease;
   background-color: #9b9b9b94;
 }
+
 .text {
   color: white;
   font-size: 20px;

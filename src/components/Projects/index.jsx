@@ -60,11 +60,18 @@ export const ProjectsCardWrap = styled.div`
   .projects-list li{
     margin: 20% 5%;
   }
+
+  .projects-list li:nth-child(2n+1):hover img{
+    transform: scale(1.2) rotate(5deg);
+  }
+  .projects-list li:nth-child(2n+2):hover img{
+    transform: scale(1.2) rotate(-15deg);
+  }
+  
   .projects-list li:nth-child(2n+1){
     align-self: flex-end;
   }
   .projects-list li:nth-child(4n+2){
     align-self: center;
-
   }
 `;
