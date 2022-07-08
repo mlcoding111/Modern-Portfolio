@@ -48,6 +48,11 @@ body {
   padding: 0;
   color: #fff;
   background: #0C0C0C;
+  background: rgb(12,12,12);
+  // Grey
+  /* background: linear-gradient(164deg, rgba(12,12,12,1) 0%, rgba(12,12,12,1) 53%, rgba(21,37,46,1) 100%); */
+  // Redish
+  background: linear-gradient(164deg, rgba(12,12,12,1) 0%, rgba(12,12,12,1) 53%, rgba(46,21,21,1) 100%);
   font-family: 'Poppins', sans-serif;
   background-attachment: fixed;
 }
