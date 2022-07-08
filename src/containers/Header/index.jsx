@@ -19,6 +19,7 @@ function Header() {
         <StickyBox />
         <div className="hero">
 
+
           <div className={`${pulsing ? "pulse" : ""} loadable hero-img`}
           >
             <motion.img 
