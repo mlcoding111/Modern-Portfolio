@@ -4,12 +4,13 @@ import styled from 'styled-components'
 export const SkillCard = styled.div`
   margin-top: 5% !important;
   padding: 5em 2em;
-  @media (max-width: 940px){
-    padding: 3em 1em;
-  }
   background: ${(props) => (props.red ? props.theme.secondaryOp : "rgba(40, 40, 40, .8)")};
   h2{
     margin-bottom: 15px;
+  }
+
+  @media (max-width: 940px){
+    padding: 3em 1em;
   }
 `;
 
@@ -32,10 +33,10 @@ export const Header = styled.header`
   position: relative;
   margin: 0 auto;
   width: clamp(200px, 90vw, 100%);
-  border: 1px solid red;
   min-height: 85vh;
   padding-block: min(15vh, 9rem);
   padding-inline: min(8em, 2em);
+
 
   .hero{
     // Change it for mobile
@@ -55,7 +56,7 @@ export const Header = styled.header`
   }
     
   .hero > * {
-    border: 1px solid white;
+    /* border: 1px solid white; */
     padding-block: min(10vh, 2rem);
     padding-inline: 2em;
     flex: 1 1 10em;
