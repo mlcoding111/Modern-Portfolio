@@ -29,18 +29,20 @@ const data = [
     link: "https://google.ca",
   },
 ];
+
 function Projects() {
+
   return (
     <ProjectsCardWrap>
       <h1>Recent Projects</h1>
       <ul className="projects-list">
         {data.map((item, key) => (
           <li>
-            <ProjectCard title={item.title} year={item.year} link={item.link} />
+            <ProjectCard title={item.title} year={item.year} link={item.link} speed={key + 2}/>
           </li>
         ))}
       </ul>
-
+          
       {/* Map trough ProjectCard here */}
     </ProjectsCardWrap>
   );
@@ -58,7 +60,7 @@ export const ProjectsCardWrap = styled.div`
   }
 
   .projects-list li{
-    margin: 20% 5%;
+    margin: 6% 5%;
   }
 
   .projects-list li:nth-child(2n+1):hover img{

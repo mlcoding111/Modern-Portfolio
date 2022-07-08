@@ -1,11 +1,33 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function ProjectCard({title, year, link}) {
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
+function ProjectCard({title, year, link, speed}) {
+  const [ref, inView, entry] = useInView({
+    /* Optional options */
+    threshold: 0.5,
+    triggerOnce: false
+  });
+
+  const variants = {
+    visible: { opacity: 1, scale: 1, y: 0 },
+    hidden: {
+      opacity: 0,
+      scale: 0.65,
+      y: 50
+    }
+  };
 
   return (
-    <Card>
-        <div className="img-container">
+    <Card 
+      animate={inView ? 'visible' : 'hidden'}
+      variants={variants}
+      transition={{ duration: 1, ease: 'easeOut' }}
+      ref={ref}
+    >
+        <div className="img-container">    
           <img src="https://picsum.photos/500" />
           <div className="overlay">
             <div className="text">
@@ -20,17 +42,36 @@ function ProjectCard({title, year, link}) {
 
 export default ProjectCard
 
-export const Card = styled.div`
+export const Card = styled(motion.div)`
+
+@keyframes pulse{
+  0%  {   filter: blur(0px) }
+  25%  {   filter: blur(2px) }
+  50%  {   filter: blur(5px) }
+  75%  {   filter: blur(2px) }
+  100%  {   filter: blur(0px) }
+}
+
 .img-container{
   position: relative;
   transition: all 0.5s;
   overflow: hidden;
   margin: 0 auto;
+  transform: rotate3d(0, 1, 0, 15deg);
+  border-radius: 5px;
+  transition: .5s all ease-in-out;
 }
+
+.img-container:hover{
+  transform: rotate3d(0, 1, 0, 0deg);
+  box-shadow: 1px 2px 15px #ffffff39;
+  /* animation-name: pulse;
+  animation-duration: 1s; */
+}
+
 
 img{
   display: block;
-  width: 100%;
   transition: .5s all ease-in-out;
 }
 
@@ -44,7 +85,7 @@ img{
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #9b9b9b94;
+  background-color: #25252593;
 }
 
 .text {
