@@ -63,11 +63,21 @@ export const Header = styled.header`
   }
 
   .hero-description{
-    flex: 2;
+    flex: 1;
   }  
+  .hero-img{
+    display: flex;
+  }
+
+  img{
+    margin-left: auto;
+    border-radius: 30px;
+  }
+  
   .hero-button{
     display: flex;
   }
+
   .hero-button > *{
     padding-block: min(20vh, .5rem);
     padding-inline: min(8em, 2em);

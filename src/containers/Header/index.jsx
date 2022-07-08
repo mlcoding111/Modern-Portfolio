@@ -10,7 +10,9 @@ function Header() {
         <StickyBox />
         <div className="hero">
 
-          <div className="hero-img"></div>
+          <div className="hero-img">
+            <img src={require("./me.jpg")} width="400"></img>
+          </div>
 
           <div className="hero-description">
             <div className="hero-text">
