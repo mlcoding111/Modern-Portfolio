@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import {motion} from 'framer-motion'
 
-export const SkillCard = styled.div`
+export const SkillCard = styled(motion.div)`
   margin-top: 5% !important;
   padding: 5em 2em;
   background: ${(props) => (props.red ? props.theme.secondaryOp : "rgba(40, 40, 40, .8)")};
