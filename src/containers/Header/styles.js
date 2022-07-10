@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import {motion} from 'framer-motion'
 
 export const SkillCard = styled.div`
   margin-top: 5% !important;
@@ -14,7 +14,7 @@ export const SkillCard = styled.div`
   }
 `;
 
-export const StickyBox = styled.div`
+export const StickyBox = styled(motion.div)`
   position: absolute;
   overflow-y: visible;
   z-index: -1;
@@ -30,7 +30,7 @@ export const StickyBox = styled.div`
 `
 
 // clamp([value-min], [value-preferred], [value-max]);
-export const Header = styled.header`
+export const Header = styled(motion.header)`
   position: relative;
   margin: 0 auto;
   width: clamp(200px, 90vw, 100%);

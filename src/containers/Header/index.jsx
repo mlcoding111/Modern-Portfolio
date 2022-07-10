@@ -3,11 +3,33 @@ import * as Styled from './styles.js'
 import { Button } from "../../styles/styles.js";
 import { StickyBox } from "./styles.js";
 
-import { motion } from "framer-motion";
+import {
+  useViewportScroll,
+  motion,
+  useTransform
+} from 'framer-motion';
+
+const variants = {
+  hidden: {opacity: 0, y: 50},
+  show: {opacity: 1,
+    y: 0,
+    transition: {
+    staggerChildren: 0.2,
+    delayChildren: 0.5,
+    ease: 'easeOut',
+    duration: 1.5
+  }}
+}
 
 function Header() {
   const [imageLoading, setImageLoading] = useState(true);
   const [pulsing, setPulsing] = useState(true);
+
+  const { scrollY } = useViewportScroll();
+  const heroY = useTransform(scrollY, value => value / -5);
+  const boxY = useTransform(scrollY, value => value / 4);
+  const y2 = useTransform(scrollY, value => value / -1);  
+
   const imageLoaded = () => {
     setImageLoading(false);
     setTimeout(() => setPulsing(false), 600);
@@ -15,11 +37,13 @@ function Header() {
 
   return (
     <>
-      <Styled.Header>
-        <StickyBox />
-        <div className="hero">
+      <Styled.Header 
+          variants={variants} 
+          initial="hidden"
+          animate="show"
+          >
 
-
+        <motion.div className="hero" variants={variants} style={{y: heroY}}>
           <div className={`${pulsing ? "pulse" : ""} loadable hero-img`}
           >
             <motion.img 
@@ -38,7 +62,7 @@ function Header() {
               src={require("./me.jpg")}></motion.img>
           </div>
 
-          <div className="hero-description">
+          <motion.div className="hero-description">
             <div className="hero-text">
               <span id="my-name">Hello, im Michael</span>
               <h1 id="profession">Web Developer</h1>
@@ -55,10 +79,10 @@ function Header() {
               <button>Contact</button>
               <button>Resume</button>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
-        <div className="skills-display">
+        <motion.div className="skills-display" variants={variants}>
 
             <Styled.SkillCard>
               <div>
@@ -83,9 +107,9 @@ function Header() {
                 <p>Setup NodeJs server and database structure</p>
               </div>
             </Styled.SkillCard>
-        </div>
+        </motion.div>
         
-        <div className="stats-display">
+        <motion.div className="stats-display" variants={variants}>
             <div>
               <span id="year">3</span>
               <p>Years of Experiences</p>
@@ -94,7 +118,9 @@ function Header() {
             <div>
               <Button>My Skills</Button>
             </div>
-        </div>
+        </motion.div>
+
+        <StickyBox/>
 
       </Styled.Header>
     </>
