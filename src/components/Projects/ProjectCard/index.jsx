@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
 
 function ProjectCard({title, year, link, speed}) {
+
   const [ref, inView, entry] = useInView({
     /* Optional options */
     threshold: 0.5,

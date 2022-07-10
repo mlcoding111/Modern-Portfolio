@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import * as Styled from "./styles.js";
-import { Button } from "../../styles/styles.js";
+
+import Button from "../../components/Reusable/Button/index.jsx";
 import { StickyBox } from "./styles.js";
 
 import { useInView } from "react-intersection-observer";
