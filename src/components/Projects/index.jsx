@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import ProjectCard from "./ProjectCard";
 
+import { useInView } from "react-intersection-observer";
+import { useViewportScroll, motion, useTransform } from "framer-motion";
+
 const data = [
   {
     title: "Movie App",
@@ -30,12 +33,33 @@ const data = [
   },
 ];
 
+const variants = {
+  hidden: { opacity: 0, x: -150 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      ease: "easeOut",
+      duration: 1.5,
+    },
+  },
+};
 function Projects() {
+
+  const [ref, inView, entry] = useInView({
+    /* Optional options */
+    threshold: 1,
+    triggerOnce: false,
+  });
 
   return (
     
     <ProjectsCardWrap>
-      <h1>Recent Projects</h1>
+      <motion.h1 ref={ref} animate={inView ? 'show' : 'hidden'}
+          variants={variants}
+      >
+        Recent Projects
+      </motion.h1>
       <ul className="projects-list">
         {data.map((item, key) => (
           <li key={key}>

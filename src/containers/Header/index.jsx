@@ -54,9 +54,6 @@ function Header() {
   const card2Y = useTransform(scrollY, (value) => value / -6);
   const card3Y = useTransform(scrollY, (value) => value / -8);
 
-
-  const boxY = useTransform(scrollY, (value) => value / -2);
-
   const [ref, inView, entry] = useInView({
     /* Optional options */
     threshold: 1,
