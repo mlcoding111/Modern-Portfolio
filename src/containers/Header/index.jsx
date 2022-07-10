@@ -20,14 +20,23 @@ const variants = {
   },
 };
 
+const boxVariants = {
+  hidden: {opacity: 0, x: -150},
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      ease: "easeOut",
+      duration: 1.5,
+    }
+  }
+}
 const cardVariants = {
   hidden: { opacity: 0, x: 50 },
   show: {
     opacity: 1,
     x: 0,
     transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.5,
       ease: "easeOut",
       duration: 1.5,
     },
@@ -44,6 +53,9 @@ function Header() {
   const card1Y = useTransform(scrollY, (value) => value / -4);
   const card2Y = useTransform(scrollY, (value) => value / -6);
   const card3Y = useTransform(scrollY, (value) => value / -8);
+
+
+  const boxY = useTransform(scrollY, (value) => value / -2);
 
   const [ref, inView, entry] = useInView({
     /* Optional options */
@@ -151,7 +163,10 @@ function Header() {
           </div>
         </motion.div>
 
-        <StickyBox />
+        <StickyBox  
+            animate={inView ? 'show' : 'hidden'}
+            variants={boxVariants}
+        />
         
       </Styled.Header>
     </>
