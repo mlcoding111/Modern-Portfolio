@@ -11,8 +11,7 @@ function Home() {
     <>
         <Header />
 
-        <main>
-            
+        <main>            
             <section>
                 <Projects />
             </section>
