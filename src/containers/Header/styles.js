@@ -108,7 +108,7 @@ export const Header = styled.header`
   .skills-display{
     position: relative;
     max-width: 1000px;
-    margin: 3em auto;
+    margin: 4em auto;
     padding: 2em 0;
     display: flex;
     flex-wrap: wrap;
