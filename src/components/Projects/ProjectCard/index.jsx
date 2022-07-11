@@ -11,7 +11,7 @@ function ProjectCard({title, src, technologies, link}) {
   const [ref, inView, entry] = useInView({
     /* Optional options */
     threshold: 0.5,
-    triggerOnce: false
+    triggerOnce: true
   });
 
   const variants = {
