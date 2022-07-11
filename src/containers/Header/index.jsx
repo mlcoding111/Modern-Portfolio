@@ -88,7 +88,6 @@ function Header() {
                 { opacity: { delay: 0.5, duration: 0.4 } })
               }
               onLoad={imageLoaded}
-              width="50%"
               src={require("./me.jpg")}
             ></motion.img>
           </div>

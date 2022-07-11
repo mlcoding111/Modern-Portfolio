@@ -38,39 +38,68 @@ export const Header = styled(motion.header)`
   padding-block: min(15vh, 9rem);
   padding-inline: min(8em, 2em);
 
-
-  .hero{
-    // Change it for mobile
-    display: flex;    
-    flex-wrap: wrap;    
-    /* display: grid;
-    gap: 1em;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); // replace 1fr for auto when image will be uploaded */
-  }
-
-  @media (max-width: 940px){
+  @media (max-width: 800px){
+    padding: 0 !important;
     padding-block: min(15vh, 1rem);
     padding-inline: .5em;
     .hero{
       flex-direction: column;
     }    
+    .hero > * {
+    /* border: 1px solid white; */
+    padding-inline: 1em;
+    padding-block: min(10vh, 1rem);
+    flex: 0;
   }
-    
-  .hero > * {
+  }
+
+  @media (min-width: 1125px){
+    .hero > * {
     /* border: 1px solid white; */
     padding-block: min(10vh, 2rem);
     padding-inline: 2em;
     flex: 1 1 10em;
+    }
   }
+
+  @media (max-width: 1375px){
+    .hero-description{
+      flex: 2 !important;
+    } 
+
+    img, .hero-img{
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+  }
+
+  @media (max-width: 1125px){
+    img{
+      display: none !important;
+    }
+  }
+
+  .hero{
+    display: flex;    
+    flex-wrap: wrap;    
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    
 
   .hero-description{
     flex: 1;
   }  
-  .hero-img{
-    display: flex;
-  }
 
   img{
+    width: clamp(200px, 400px, 500px);
     margin-left: auto;
     border-radius: 30px;
   }

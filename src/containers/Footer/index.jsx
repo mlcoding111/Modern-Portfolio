@@ -7,7 +7,7 @@ function Footer() {
       <div>All Rights Reserved © 2022</div>
 
       <div className="brand">
-        Brand here
+        MLWeb
       </div>
 
       <div>Designed & Built by MLWeb</div>
