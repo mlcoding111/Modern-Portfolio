@@ -5,7 +5,7 @@ export const data = [
         src: require("../assets/projects/maison.jpg"),
         github: "https://github.com/mlcoding111/Maison-OnePager",
         website: "https://mlcoding111.github.io/Maison-OnePager/",
-        technologies: ['Html', 'Scss', 'Css']
+        technologies: ['Html', 'Sass', 'Css']
     },    
 
     {

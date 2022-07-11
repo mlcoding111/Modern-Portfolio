@@ -37,7 +37,7 @@ function Projects() {
       <ul className="projects-list">
         {data.map((item, key) => (
           <li key={key}>
-            <ProjectCard title={item.title} year={item.year} link={item.link} src={item.src} />
+            <ProjectCard title={item.title} year={item.year} link={item.link} src={item.src} technologies={item.technologies} />
           </li>
         ))}
       </ul>

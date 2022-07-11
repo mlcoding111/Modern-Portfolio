@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
 import { useNavigate } from "react-router-dom";
 
-function ProjectCard({title, src}) {
+function ProjectCard({title, src, technologies}) {
   let navigate = useNavigate();
 
   const [ref, inView, entry] = useInView({
@@ -29,7 +29,7 @@ function ProjectCard({title, src}) {
       variants={variants}
       transition={{ duration: 1, ease: 'easeOut' }}
       ref={ref}
-      onClick={e => navigate(`/project/${title}`)}
+      onClick={e => navigate(`/project/${title}`, { state: {title, src, technologies}})}
     >
         <div className="img-container">    
           <img src={src} />
@@ -76,7 +76,7 @@ export const Card = styled(motion.div)`
 
 
 img{
-  width: 84%;
+  width: 100%;
   display: block;
   transition: .5s all ease-in-out;
 }
