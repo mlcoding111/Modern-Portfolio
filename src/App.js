@@ -28,7 +28,7 @@ function App() {
       <Overlay />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/project:id" element={<Project />} />
+          <Route path="/project/:name" element={<Project />} />
         </Routes>
       <Footer />
     </BrowserRouter>
