@@ -47,11 +47,9 @@ export const SkillsShowCase = styled.ul`
     margin: 3rem auto;
     gap: 1em;
     img{
-      margin: 0 auto;
-      
+      margin: 0 auto;      
     }
     li{
-
       background: rgba(43, 43, 43, 0.36);
       border-radius: 16px;
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);

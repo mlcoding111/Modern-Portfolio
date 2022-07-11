@@ -33,7 +33,7 @@ function getRelativeCoordinates(event, referenceElement){
       };
 }
 
-function Button() {
+function Button(props) {
   const { scrollY } = useViewportScroll();
   const buttonY = useTransform(scrollY, (value) => value / 5);
 
@@ -59,6 +59,9 @@ function Button() {
           transition: { type: "tween"},
         }}
       ></motion.a>
+      <div className="inner-content">
+        {props.children}
+      </div>
     </Wrap>
 
   );
@@ -67,6 +70,7 @@ function Button() {
 export default Button;
 
 export const Wrap = styled(motion.button)`
+  position: relative;
   color: white;
   background: transparent;
   border: 1px solid #fff;
@@ -80,6 +84,14 @@ export const Wrap = styled(motion.button)`
   z-index: 1;
   color: black;
 
+  .inner-content{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+    z-index: 999;
+  }
 
   a {
     display: flex;
