@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import * as Styled from "./styles.js";
-
+import {FaGithub} from "react-icons/fa";
 import Button from "../../components/Reusable/Button/index.jsx";
 import { StickyBox } from "./styles.js";
 
@@ -54,10 +54,6 @@ function Header() {
   const card1Y = useTransform(scrollY, (value) => value / -3);
   const card2Y = useTransform(scrollY, (value) => value / -5);
   const card3Y = useTransform(scrollY, (value) => value / -7);
-
-  // const card1Y = useTransform(scrollY, (value) => value / -4);
-  // const card2Y = useTransform(scrollY, (value) => value / -6);
-  // const card3Y = useTransform(scrollY, (value) => value / -8);
 
   const [ref, inView, entry] = useInView({
     /* Optional options */
@@ -161,7 +157,7 @@ function Header() {
           </div>
 
           <div>
-            <Button>My Skills</Button>
+            <Button><FaGithub /></Button>
           </div>
         </motion.div>
 

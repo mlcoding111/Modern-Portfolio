@@ -41,6 +41,9 @@ export const Header = styled(motion.header)`
   flex-direction: column;
   justify-content: center;
 
+  svg{
+    font-size: 2em;
+  }
   @media (max-width: 800px){
     padding: 0 !important;
     padding-block: min(15vh, 1rem);

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import { IoMail } from "react-icons/io5";
 import Button from '../Reusable/Button'
 
 function Contact() {
@@ -12,7 +12,7 @@ function Contact() {
       <p>I’m currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, 
         I’ll try my best to get back to you!</p>
       <div>
-       <Button>My Skills</Button>
+       <Button><IoMail /></Button>
       </div>
     </ContactWrap>
   )
@@ -21,6 +21,10 @@ function Contact() {
 export default Contact
 
 export const ContactWrap = styled.div`
+
+svg{
+  font-size: 3em;
+}
 hr{
   width: 25%;
 }

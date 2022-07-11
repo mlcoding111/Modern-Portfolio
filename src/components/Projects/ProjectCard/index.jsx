@@ -46,7 +46,7 @@ function ProjectCard({title, src, technologies}) {
             </div>
           </div>                  
         </div>
-        <h3>{title}</h3>
+        {/* <h3>{title}</h3> */}
     </Card>
   )
 }
@@ -67,7 +67,7 @@ h3{
 }
 .img-container{
   width: 50%;
-  min-width: 400px;
+  min-width: 300px;
   background: transparent;
   position: relative;
   transition: all 0.5s;

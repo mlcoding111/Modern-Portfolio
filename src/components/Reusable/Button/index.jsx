@@ -83,13 +83,17 @@ export const Wrap = styled(motion.button)`
   user-select: none;
   z-index: 1;
   color: black;
+  :hover > .inner-content{
+    color: black;
+  }
 
   .inner-content{
+    transition: color 0.2s ease-in-out;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    color: red;
+    color: white;
     z-index: 999;
   }
 
