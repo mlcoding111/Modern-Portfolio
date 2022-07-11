@@ -57,14 +57,18 @@ export const ProjectsCardWrap = styled.div`
   }
 
   .projects-list li{
-    margin: 6% 5%;
+    margin: 15% 5%;
   }
 
+  .projects-list li .img-container:hover{
+    cursor: pointer;
+  }
   .projects-list li:nth-child(2n+1):hover .img-container{
-    transform: scale(1.2) rotate(5deg);
+    transform: scale(1.2);
+    /* transform: scale(1.2) rotate(5deg); */
   }
   .projects-list li:nth-child(2n+2):hover .img-container{
-    transform: scale(1.2) rotate(-5deg);
+    transform: scale(1.2);
   }
   
   .projects-list li:nth-child(2n+1){

@@ -66,7 +66,8 @@ h3{
   text-align: center;
 }
 .img-container{
-  width: 50%;
+
+  width: 60%;
   min-width: 300px;
   background: transparent;
   position: relative;
