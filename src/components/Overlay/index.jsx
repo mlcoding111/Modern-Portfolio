@@ -118,4 +118,7 @@ export const Wrap = styled(motion.div)`
     svg{
        margin: 2em;
     }
+    @media (max-width: 1530px){
+    display: none !important;
+  }
 `;
