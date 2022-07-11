@@ -42,7 +42,7 @@ function ProjectCard({title, src, technologies}) {
           <img src={src} />
           <div className="overlay">
             <div className="text">
-              <h2>Project</h2>
+              <h2>{title}</h2>
             </div>
           </div>                  
         </div>
