@@ -39,6 +39,7 @@ html:focus-within {
 
 section{
   padding: 2em;
+  margin: 3em auto;
   min-height: 50vh;
 }
 
