@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Button } from '../../styles/styles'
 
 const data = [
   require("./icons/REACT.svg").default,
@@ -31,9 +30,6 @@ function Skills() {
 
       ))}
       </SkillsShowCase>
-
-
-
       {/* <Button>Down Arrow here</Button> */}
     </SkillsWrap>
   )

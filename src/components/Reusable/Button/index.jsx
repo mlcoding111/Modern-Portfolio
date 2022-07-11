@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
+import { useViewportScroll, motion, useTransform } from "framer-motion";
 
 function getRelativeCoordinates(event, referenceElement){
     const position = {
@@ -34,6 +34,9 @@ function getRelativeCoordinates(event, referenceElement){
 }
 
 function Button() {
+  const { scrollY } = useViewportScroll();
+  const buttonY = useTransform(scrollY, (value) => value / 5);
+
   const [hovered, setHovered] = React.useState(false);
   const [mousePosition, setMousePosition] = React.useState({});
   const boxRef = useRef();
@@ -42,14 +45,13 @@ function Button() {
   };
 
   return (
-
     <Wrap
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       initial={false}
       animate={{ scale: hovered ? 1.1 : 1 }}
-    >
 
+    >
       <motion.a
         initial={false}
         animate={{
@@ -73,7 +75,6 @@ export const Wrap = styled(motion.button)`
   width: 11rem;
   cursor: pointer;
   padding: 0;
-  z-index: 999;
   position: relative;
   user-select: none;
   z-index: 1;

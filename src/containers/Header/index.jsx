@@ -49,11 +49,15 @@ function Header() {
   const [pulsing, setPulsing] = useState(true);
 
   const { scrollY } = useViewportScroll();
-  const heroY = useTransform(scrollY, (value) => value / -5);
+  const heroY = useTransform(scrollY, (value) => value / -3);
 
-  const card1Y = useTransform(scrollY, (value) => value / -4);
-  const card2Y = useTransform(scrollY, (value) => value / -6);
-  const card3Y = useTransform(scrollY, (value) => value / -8);
+  const card1Y = useTransform(scrollY, (value) => value / -3);
+  const card2Y = useTransform(scrollY, (value) => value / -5);
+  const card3Y = useTransform(scrollY, (value) => value / -7);
+
+  // const card1Y = useTransform(scrollY, (value) => value / -4);
+  // const card2Y = useTransform(scrollY, (value) => value / -6);
+  // const card3Y = useTransform(scrollY, (value) => value / -8);
 
   const [ref, inView, entry] = useInView({
     /* Optional options */
@@ -69,6 +73,7 @@ function Header() {
   return (
     <>
       <Styled.Header variants={variants} initial="hidden" animate="show">
+        
         <motion.div className="hero" variants={variants} style={{ y: heroY }}>
           <div className={`${pulsing ? "pulse" : ""} loadable hero-img`}>
             <motion.img
