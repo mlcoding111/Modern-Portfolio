@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Button } from '../../styles/styles'
+import Button from '../Reusable/Button'
 
 function Contact() {
   return (
     <ContactWrap>
       <h1>Contact</h1>
-      <Button>Contact Icon</Button>
+      <Button/>
     </ContactWrap>
   )
 }
