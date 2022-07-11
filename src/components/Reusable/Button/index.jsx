@@ -48,6 +48,7 @@ function Button(props) {
     <Wrap
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onClick={props.handleClick}
       initial={false}
       animate={{ scale: hovered ? 1.1 : 1 }}
 

@@ -6,7 +6,7 @@ import Button from '../../components/Reusable/Button';
 
 function ProjectDetail() {
   const location = useLocation();
-  const {title, src, technologies} = location.state;
+  const {title, src, technologies, link} = location.state;
 
   // Import all techno svgs
   function importAll(r) {
@@ -29,11 +29,15 @@ function ProjectDetail() {
     return list
   }
 
+  const handleBtnClick = () => {
+    window.open(link)
+  }
+
   return (
     <Wrap>
       <h1>{title}</h1>
       <ProjectCard title={title} src={src}/>
-      <Button />
+      <Button handleClick={handleBtnClick}>Visit</Button>
 
       <div className="techno-info">
         <h1>Technologies</h1>

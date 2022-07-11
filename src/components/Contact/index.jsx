@@ -4,7 +4,6 @@ import { IoMail } from "react-icons/io5";
 import Button from '../Reusable/Button'
 
 function Contact() {
-
   return (
     <ContactWrap>      
       <h1>Let's get in touch!</h1>

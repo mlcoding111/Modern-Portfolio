@@ -66,6 +66,9 @@ function Header() {
     setTimeout(() => setPulsing(false), 600);
   };
 
+  const handleBtnClick = () => {
+    window.open('https://github.com/mlcoding111')
+  }
   return (
     <>
       <Styled.Header variants={variants} initial="hidden" animate="show">
@@ -157,7 +160,7 @@ function Header() {
           </div>
 
           <div>
-            <Button><FaGithub /></Button>
+            <Button handleClick={handleBtnClick}><FaGithub /></Button>
           </div>
         </motion.div>
 
