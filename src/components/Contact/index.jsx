@@ -18,6 +18,9 @@ function Contact() {
 export default Contact
 
 export const ContactWrap = styled.div`
+h1{
+  padding: 1em 0;
+}
   display: flex;
   flex-direction: column;
   align-items: center;
