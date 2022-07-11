@@ -82,6 +82,7 @@ export const Wrap = styled.div`
 
 export const TechnoList = styled.ul`
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     gap: 3em;
     margin: 5em 0;

@@ -3,11 +3,11 @@ import styled from 'styled-components'
 
 import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function ProjectCard({title, src, technologies}) {
   let navigate = useNavigate();
-
+  const location = useLocation();
   const [ref, inView, entry] = useInView({
     /* Optional options */
     threshold: 0.5,
@@ -23,13 +23,19 @@ function ProjectCard({title, src, technologies}) {
     }
   };
 
+  const handleClick = () => {
+    if(location.pathname === "/"){
+      navigate(`/project/${title}`, { state: {title, src, technologies}})
+    }
+  }
+
   return (
     <Card 
       animate={inView ? 'visible' : 'hidden'}
       variants={variants}
       transition={{ duration: 1, ease: 'easeOut' }}
       ref={ref}
-      onClick={e => navigate(`/project/${title}`, { state: {title, src, technologies}})}
+      onClick={handleClick}
     >
         <div className="img-container">    
           <img src={src} />
