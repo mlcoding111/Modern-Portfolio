@@ -83,6 +83,11 @@ export const Wrap = styled(motion.button)`
   user-select: none;
   z-index: 1;
   color: black;
+
+  @media (max-width: 500px){
+    height: 5rem;
+    width: 5rem;
+  }
   :hover > .inner-content{
     color: black;
   }
