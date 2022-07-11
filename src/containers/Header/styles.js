@@ -37,6 +37,9 @@ export const Header = styled(motion.header)`
   min-height: 85vh;
   padding-block: min(15vh, 9rem);
   padding-inline: min(8em, 2em);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   @media (max-width: 800px){
     padding: 0 !important;
@@ -52,14 +55,22 @@ export const Header = styled(motion.header)`
     flex: 0;
   }
   }
-
-  @media (min-width: 1125px){
-    .hero > * {
+  .hero > * {
     /* border: 1px solid white; */
     padding-block: min(10vh, 2rem);
     padding-inline: 2em;
     flex: 1 1 10em;
     }
+
+
+  @media (max-width: 1125px){
+    .hero > * {
+    /* border: 1px solid white; */
+    padding-block: min(10vh, .5rem);
+    padding-inline: 1em;
+    flex: 0 1 10em;
+    }
+
   }
 
   @media (max-width: 1375px){
