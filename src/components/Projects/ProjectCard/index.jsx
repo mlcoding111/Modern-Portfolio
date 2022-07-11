@@ -62,8 +62,12 @@ export const Card = styled(motion.div)`
   75%  {   filter: blur(2px) }
   100%  {   filter: blur(0px) }
 }
-
+h3{
+  text-align: center;
+}
 .img-container{
+  width: 50%;
+  min-width: 400px;
   background: transparent;
   position: relative;
   transition: all 0.5s;
