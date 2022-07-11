@@ -8,12 +8,14 @@ function ProjectDetail() {
   const location = useLocation();
   const {title, src, technologies} = location.state;
 
+  // Import all techno svgs
   function importAll(r) {
       return r.keys().map(r);
   }
 
   const imagesData = importAll(require.context('../../components/assets/skills', false, /\.(png|jpe?g|svg)$/));
 
+  // Map trough all svg icons to see if it match with the project technos
   const filterTechnologies = () =>{
     let list = []
     technologies.forEach(item => {
@@ -23,12 +25,10 @@ function ProjectDetail() {
         }
       })
     })
+    // return list of used technologies to render
     return list
   }
 
-  React.useEffect(()=> {  
-    filterTechnologies()
-  } , [])
   return (
     <Wrap>
       <h1>{title}</h1>

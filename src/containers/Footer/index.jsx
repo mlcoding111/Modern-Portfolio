@@ -22,11 +22,11 @@ export const FooterWrap = styled.footer`
   padding: 2em;
   display: grid;
   width: 100%;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   align-items: flex-end;
   justify-items: center;
-  grid-template-columns: repeat(3, 1fr);
-
+  grid-template-columns: repeat(3, 1fr); 
+  background-color: #0c0c0c;
   @media (max-width: 768px){
     > :first-child{
       display: none !important;

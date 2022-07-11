@@ -24,6 +24,7 @@ function ProjectCard({title, src, technologies}) {
   };
 
   const handleClick = () => {
+    // If we are on home, redirect to detail page. Else do nothing
     if(location.pathname === "/"){
       navigate(`/project/${title}`, { state: {title, src, technologies}})
     }
