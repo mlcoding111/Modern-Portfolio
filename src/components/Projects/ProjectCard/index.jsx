@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
 
-function ProjectCard({title, year, link, speed}) {
+function ProjectCard({title, src}) {
 
   const [ref, inView, entry] = useInView({
     /* Optional options */
@@ -29,7 +29,7 @@ function ProjectCard({title, year, link, speed}) {
       ref={ref}
     >
         <div className="img-container">    
-          <img src="https://picsum.photos/500" />
+          <img src={src} />
           <div className="overlay">
             <div className="text">
               <h2>Project</h2>
@@ -54,6 +54,7 @@ export const Card = styled(motion.div)`
 }
 
 .img-container{
+  background: transparent;
   position: relative;
   transition: all 0.5s;
   overflow: hidden;

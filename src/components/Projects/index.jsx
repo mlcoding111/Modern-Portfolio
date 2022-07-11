@@ -5,33 +5,7 @@ import ProjectCard from "./ProjectCard";
 import { useInView } from "react-intersection-observer";
 import { useViewportScroll, motion, useTransform } from "framer-motion";
 
-const data = [
-  {
-    title: "Movie App",
-    year: 2022,
-    link: "https://google.ca",
-  },
-  {
-    title: "Movie App",
-    year: 2022,
-    link: "https://google.ca",
-  },
-  {
-    title: "Movie App",
-    year: 2022,
-    link: "https://google.ca",
-  },
-  {
-    title: "Movie App",
-    year: 2022,
-    link: "https://google.ca",
-  },
-  {
-    title: "Movie App",
-    year: 2022,
-    link: "https://google.ca",
-  },
-];
+import { data } from "./data";
 
 const variants = {
   hidden: { opacity: 0, x: -150 },
@@ -63,7 +37,7 @@ function Projects() {
       <ul className="projects-list">
         {data.map((item, key) => (
           <li key={key}>
-            <ProjectCard title={item.title} year={item.year} link={item.link} speed={key + 2} />
+            <ProjectCard title={item.title} year={item.year} link={item.link} src={item.src} />
           </li>
         ))}
       </ul>
@@ -86,11 +60,11 @@ export const ProjectsCardWrap = styled.div`
     margin: 6% 5%;
   }
 
-  .projects-list li:nth-child(2n+1):hover img{
+  .projects-list li:nth-child(2n+1):hover .img-container{
     transform: scale(1.2) rotate(5deg);
   }
-  .projects-list li:nth-child(2n+2):hover img{
-    transform: scale(1.2) rotate(-15deg);
+  .projects-list li:nth-child(2n+2):hover .img-container{
+    transform: scale(1.2) rotate(-5deg);
   }
   
   .projects-list li:nth-child(2n+1){

@@ -55,6 +55,7 @@ export const Header = styled(motion.header)`
     flex: 0;
   }
   }
+  
   .hero > * {
     /* border: 1px solid white; */
     padding-block: min(10vh, 2rem);
