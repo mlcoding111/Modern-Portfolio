@@ -10,7 +10,7 @@ function ProjectCard({title, src, technologies, link}) {
   const location = useLocation();
   const [ref, inView, entry] = useInView({
     /* Optional options */
-    threshold: 0.5,
+    threshold: 0.3,
     triggerOnce: true
   });
 

@@ -22,7 +22,7 @@ function Projects() {
 
   const [ref, inView, entry] = useInView({
     /* Optional options */
-    threshold: 1,
+    threshold: 0.5,
     triggerOnce: false,
   });
 
