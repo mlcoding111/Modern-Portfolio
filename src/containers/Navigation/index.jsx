@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import {useNavigate} from 'react-router-dom'
 function Navigation() {
+  let navigate = useNavigate();
   return (
     <NavigationWrap>
       <div className="brand">
@@ -13,7 +14,7 @@ function Navigation() {
         <h1>MLWeb</h1>
       </div>
       <PrimaryNav>
-        <li>Home</li>
+        <li onClick={()=> navigate("/")}>Home</li>
         <li>Projects</li>
         <li>About</li>
         <li>Contact</li>
