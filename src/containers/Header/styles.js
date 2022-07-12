@@ -128,6 +128,9 @@ export const Header = styled(motion.header)`
     margin: 0em 0.5em;
   }
 
+  button:hover{
+    cursor: pointer;
+  }
   .hero-text{
     padding-block: min(10vh, 3rem);
   }
