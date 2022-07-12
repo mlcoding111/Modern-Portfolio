@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import * as Styled from "./styles.js";
-import {FaGithub} from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import Button from "../../components/Reusable/Button/index.jsx";
 import { StickyBox } from "./styles.js";
 
@@ -22,16 +22,16 @@ const variants = {
 };
 
 const boxVariants = {
-  hidden: {opacity: 0, x: -150},
+  hidden: { opacity: 0, x: -50 },
   show: {
     opacity: 1,
     x: 0,
     transition: {
       ease: "easeOut",
       duration: 1.5,
-    }
-  }
-}
+    },
+  },
+};
 
 const cardVariants = {
   hidden: { opacity: 0, x: 25 },
@@ -48,15 +48,15 @@ const cardVariants = {
 function Header() {
   const [imageLoading, setImageLoading] = useState(true);
   const [pulsing, setPulsing] = useState(true);
-
   const { scrollY } = useViewportScroll();
-  const heroY = useTransform(scrollY, (value) => value / -3);
 
+  // All Y value relative to current scroll value
+  const heroY = useTransform(scrollY, (value) => value / -3);
   const card1Y = useTransform(scrollY, (value) => value / -3);
   const card2Y = useTransform(scrollY, (value) => value / -5);
   const card3Y = useTransform(scrollY, (value) => value / -7);
 
-  const [ref, inView ] = useInView({
+  const [ref, inView] = useInView({
     /* Optional options */
     threshold: 1,
     triggerOnce: true,
@@ -68,12 +68,12 @@ function Header() {
   };
 
   const handleBtnClick = () => {
-    window.open('https://github.com/mlcoding111')
-  }
+    window.open("https://github.com/mlcoding111");
+  };
   return (
     <>
       <Styled.Header variants={variants} initial="hidden" animate="show">
-        
+        {/* HERO  */}
         <motion.div className="hero" variants={variants} style={{ y: heroY }}>
           <div className={`${pulsing ? "pulse" : ""} loadable hero-img`}>
             <motion.img
@@ -112,6 +112,7 @@ function Header() {
           </motion.div>
         </motion.div>
 
+        {/* SKILLS  */}
         <motion.div className="skills-display">
           <Styled.SkillCard
             ref={ref}
@@ -153,6 +154,7 @@ function Header() {
           </Styled.SkillCard>
         </motion.div>
 
+        {/* STATS  */}
         <motion.div className="stats-display">
           <div>
             <span id="year">3</span>
@@ -160,15 +162,16 @@ function Header() {
           </div>
 
           <div>
-            <Button handleClick={handleBtnClick}><FaGithub /></Button>
+            <Button handleClick={handleBtnClick}>
+              <FaGithub />
+            </Button>
           </div>
         </motion.div>
-
-        <StickyBox  
-            animate={inView ? 'show' : 'hidden'}
-            variants={boxVariants}
+        {/* STICKY BOX BEHIND HERO CONTAINER  */}
+        <StickyBox
+          animate={inView ? "show" : "hidden"}
+          variants={boxVariants}
         />
-        
       </Styled.Header>
     </>
   );

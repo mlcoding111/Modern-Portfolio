@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 // This component is used for every section
 
 const variants = {
-  hidden: { opacity: 0, x: -150 },
+  hidden: { opacity: 0, x: 50 },
   show: {
     opacity: 1,
     x: 0,

@@ -3,8 +3,7 @@ import React from "react";
 import {
   BrowserRouter,
   Routes,
-  Route,
-  useLocation,
+  Route
 } from "react-router-dom";
 
 import ScrollTop from "./containers/ScrollTop";
@@ -20,8 +19,6 @@ import Overlay from "./components/Overlay";
 import { AnimatePresence } from "framer-motion";
 
 function App() {
-
-
   return (
     <BrowserRouter>
     <ScrollTop>
