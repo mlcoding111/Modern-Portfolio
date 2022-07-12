@@ -48,33 +48,36 @@ function Projects() {
 export default Projects;
 
 export const ProjectsCardWrap = styled.div`
-  display: flex;
-  flex-direction: column;
+    position: relative;
+    margin: 0 auto;
 
   .projects-list{
     display: flex;
+    justify-content: center;
     flex-direction: column;
+
   }
 
   .projects-list li{
-    margin: 15% 5%;
+    align-self: flex-end;
+    margin: 15% 0%;
   }
 
   .projects-list li .img-container:hover{
     cursor: pointer;
   }
-  .projects-list li:nth-child(2n+1):hover .img-container{
+  .projects-list li:nth-child(2n+1):hover img{
     transform: scale(1.2);
     /* transform: scale(1.2) rotate(5deg); */
   }
-  .projects-list li:nth-child(2n+2):hover .img-container{
+  .projects-list li:nth-child(2n+2):hover img{
     transform: scale(1.2);
   }
   
   .projects-list li:nth-child(2n+1){
-    align-self: flex-end;
+    align-self: flex-start;
   }
   .projects-list li:nth-child(4n+2){
-    align-self: center;
+    align-self: flex-start;
   }
 `;

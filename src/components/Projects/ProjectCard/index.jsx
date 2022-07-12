@@ -10,7 +10,7 @@ function ProjectCard({title, src, technologies, link}) {
   const location = useLocation();
   const [ref, inView, entry] = useInView({
     /* Optional options */
-    threshold: 0.3,
+    threshold: 0.5,
     triggerOnce: true
   });
 
@@ -66,21 +66,19 @@ h3{
   text-align: center;
 }
 .img-container{
-
+  margin: 0 auto;
   width: 60%;
   min-width: 300px;
   background: transparent;
   position: relative;
   transition: all 0.5s;
   overflow: hidden;
-  margin: 0 auto;
-  transform: rotate3d(0, 1, 0, 15deg);
   border-radius: 5px;
   transition: .5s all ease-in-out;
 }
 
 .img-container:hover{
-  transform: rotate3d(0, 1, 0, 0deg);
+
   box-shadow: 1px 2px 15px #ffffff39;
   /* animation-name: pulse;
   animation-duration: 1s; */

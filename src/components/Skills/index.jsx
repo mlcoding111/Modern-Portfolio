@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+// Contain all skills svg 
 const data = [
   require("./icons/REACT.svg").default,
   require("./icons/GITHUB.svg").default,
