@@ -98,5 +98,10 @@ p{
   font-size: clamp(.7rem, 1vw, .9rem);
 }
 
+// Utilities class
+.disabled {
+    pointer-events:none; //This makes it not clickable
+    opacity:0.6;         //This grays it out to look disabled
+}
 
 `

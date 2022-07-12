@@ -7,14 +7,14 @@ import {
 } from "react-router-dom";
 
 import ScrollTop from "./containers/ScrollTop";
-
 import Home from "./containers/Home";
 import Navigation from './containers/Navigation'
 import Project from './containers/ProjectDetail'
 import Footer from './containers/Footer'
-
 import ScrollIndicator from "./components/ScrollIndicator";
 import Overlay from "./components/Overlay";
+
+import TopMessage from "./components/TopMessage";
 
 import { AnimatePresence } from "framer-motion";
 
@@ -22,6 +22,7 @@ function App() {
   return (
     <BrowserRouter>
     <ScrollTop>
+      <TopMessage />
       <Navigation />
       <ScrollIndicator />
       <Overlay />

@@ -17,9 +17,9 @@ function Navigation() {
        {/* NAV LIST */}
       <PrimaryNav>
         <li onClick={()=> navigate("/")}>Home</li>
-        <li>Projects</li>
-        <li>About</li>
-        <li>Contact</li>
+        <li className="disabled">Projects</li>
+        <li className="disabled">About</li>
+        <li className="disabled">Contact</li>
       </PrimaryNav>
     </NavigationWrap>
   )
