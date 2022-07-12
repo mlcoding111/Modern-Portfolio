@@ -32,6 +32,7 @@ const boxVariants = {
     }
   }
 }
+
 const cardVariants = {
   hidden: { opacity: 0, x: 25 },
   show: {
@@ -44,7 +45,7 @@ const cardVariants = {
   },
 };
 
-function Header() {
+function Header(props) {
   const [imageLoading, setImageLoading] = useState(true);
   const [pulsing, setPulsing] = useState(true);
 
@@ -55,7 +56,7 @@ function Header() {
   const card2Y = useTransform(scrollY, (value) => value / -5);
   const card3Y = useTransform(scrollY, (value) => value / -7);
 
-  const [ref, inView, entry] = useInView({
+  const [ref, inView ] = useInView({
     /* Optional options */
     threshold: 1,
     triggerOnce: true,
@@ -114,7 +115,7 @@ function Header() {
         <motion.div className="skills-display">
           <Styled.SkillCard
             ref={ref}
-            style={{ y: card1Y }}
+            style={{ y: card1Y, backgroundColor: 'rgba(40, 40, 40, .8)' }}
             variants={cardVariants}
             animate={inView ? "show" : "hidden"}
           >
@@ -128,7 +129,7 @@ function Header() {
 
           <Styled.SkillCard
             red
-            style={{ y: card2Y }}
+            style={{ y: card2Y, backgroundColor: "rgba(215, 35, 35, 0.8)" }}
             ref={ref}
             variants={cardVariants}
             animate={inView ? "show" : "hidden"}
@@ -141,7 +142,7 @@ function Header() {
           </Styled.SkillCard>
 
           <Styled.SkillCard
-            style={{ y: card3Y }}
+            style={{ y: card3Y, backgroundColor: 'rgba(40, 40, 40, .8)' }}
             ref={ref}
             variants={cardVariants}
             animate={inView ? "show" : "hidden"}

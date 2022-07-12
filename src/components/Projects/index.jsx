@@ -20,7 +20,7 @@ const variants = {
 };
 function Projects() {
 
-  const [ref, inView, entry] = useInView({
+  const [ref, inView] = useInView({
     /* Optional options */
     threshold: 0.5,
     triggerOnce: false,

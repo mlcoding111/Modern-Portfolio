@@ -3,7 +3,7 @@ import {useLocation} from 'react-router-dom';
 import styled from 'styled-components';
 import ProjectCard from '../../components/Projects/ProjectCard'
 import Button from '../../components/Reusable/Button';
-import {FaGithub} from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 function ProjectDetail() {
   const location = useLocation();

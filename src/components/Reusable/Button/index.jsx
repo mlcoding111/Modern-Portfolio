@@ -1,49 +1,9 @@
-import React, { useRef } from "react";
+import React from "react";
 import styled from "styled-components";
-import { useViewportScroll, motion, useTransform } from "framer-motion";
-
-function getRelativeCoordinates(event, referenceElement){
-    const position = {
-        x: event.pageX,
-        y: event.pageY
-    }
-
-    const offset = {
-        left: referenceElement.offsetLeft,
-        top: referenceElement.offsetTop,
-        width: referenceElement.clientWidth,
-        height: referenceElement.clientHeight
-      };
-    
-      let reference = referenceElement.offsetParent;
-    
-      while (reference) {
-        offset.left += reference.offsetLeft;
-        offset.top += reference.offsetTop;
-        reference = reference.offsetParent;
-      }
-    
-      return {
-        x: position.x - offset.left,
-        y: position.y - offset.top,
-        width: offset.width,
-        height: offset.height,
-        centerX: (position.x - offset.left - offset.width / 2) / (offset.width / 2),
-        centerY: (position.y - offset.top - offset.height / 2) / (offset.height / 2)
-      };
-}
+import { motion} from "framer-motion";
 
 function Button(props) {
-  const { scrollY } = useViewportScroll();
-  const buttonY = useTransform(scrollY, (value) => value / 5);
-
   const [hovered, setHovered] = React.useState(false);
-  const [mousePosition, setMousePosition] = React.useState({});
-  const boxRef = useRef();
-  const handleMouseMove = e => {
-    setMousePosition(getRelativeCoordinates(e, boxRef.current));
-  };
-
   return (
     <Wrap
       onMouseEnter={() => setHovered(true)}

@@ -8,7 +8,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 function ProjectCard({title, src, technologies, link, github}) {
   let navigate = useNavigate();
   const location = useLocation();
-  const [ref, inView, entry] = useInView({
+  const [ref, inView] = useInView({
     /* Optional options */
     threshold: 0.5,
     triggerOnce: true
