@@ -6,6 +6,8 @@ import {
   Route,
 } from "react-router-dom";
 
+import ScrollTop from "./containers/ScrollTop";
+
 import Home from "./containers/Home";
 import Navigation from './containers/Navigation'
 import Project from './containers/ProjectDetail'
@@ -22,7 +24,7 @@ function App() {
 
   return (
     <BrowserRouter>
-    
+    <ScrollTop>
       <Navigation />
       <ScrollIndicator />
       <Overlay />
@@ -31,6 +33,7 @@ function App() {
           <Route path="/project/:name" element={<Project />} />
         </Routes>
       <Footer />
+    </ScrollTop>
     </BrowserRouter>
   );
 }
