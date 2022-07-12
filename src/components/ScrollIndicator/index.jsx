@@ -29,6 +29,6 @@ export const Wrap = styled.div`
     #progress{
       height: 8px;
       background: ${props => props.theme.secondary};
-      width: 50%;
+      width: 0%;
     }
 `;
