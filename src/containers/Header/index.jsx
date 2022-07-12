@@ -77,15 +77,13 @@ function Header() {
         <motion.div className="hero" variants={variants} style={{ y: heroY }}>
           <div className={`${pulsing ? "pulse" : ""} loadable hero-img`}>
             <motion.img
-              initial={{ height: "16rem", opacity: 0 }}
+              initial={{  opacity: 0 }}
               // style={{ height: imageLoading ? "6rem" : "auto" }}
               animate={{
-                height: imageLoading ? "16rem" : "auto",
                 opacity: imageLoading ? 0 : 1,
               }}
               transition={
-                ({ height: { delay: 0, duration: 0.4 } },
-                { opacity: { delay: 0.5, duration: 0.4 } })
+                ({ opacity: { delay: 0.5, duration: 0.4 } })
               }
               onLoad={imageLoaded}
               src={require("./me.jpg")}

@@ -43,6 +43,10 @@ section{
   min-height: 50vh;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;
