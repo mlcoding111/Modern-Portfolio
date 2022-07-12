@@ -40,7 +40,6 @@ export const Header = styled(motion.header)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   svg{
     font-size: 2em;
   }
@@ -123,10 +122,9 @@ export const Header = styled(motion.header)`
     display: flex;
   }
 
-  .hero-button > *{
-    padding-block: min(20vh, .5rem);
+  button{
     padding-inline: min(8em, 2em);
-    /* padding: 1em 2em; */
+    padding: .5em 1.5em;
     margin: 0em 0.5em;
   }
 

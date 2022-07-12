@@ -102,8 +102,8 @@ function Header() {
             </div>
 
             <div className="hero-button">
-              <button>Contact</button>
-              <button>Resume</button>
+              <a href="mailto:kennycodes@hotmail.com"><motion.button whileHover={{scale: 1.1}} whileTap={{scale: 1.2}}>Contact</motion.button></a>
+              <motion.button whileHover={{scale: 1.1}} whileTap={{scale: 1.2}} onClick={()=> window.open("https://docs.google.com/document/d/1FJnO_tW-DfhVMMY9SW9KY2nLflMWG5iBihob_w-oRWs/edit")}>Resume</motion.button>
             </div>
           </motion.div>
         </motion.div>
