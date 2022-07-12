@@ -43,7 +43,7 @@ section{
   min-height: 50vh;
 }
 
-body, html{
+html{
   overflow-x: hidden;
 }
 
