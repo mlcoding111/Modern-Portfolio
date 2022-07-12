@@ -67,6 +67,15 @@ ul{
   list-style: none;
 }
 
+// Svg Responsiveness
+
+@media (max-width: 700px){
+  .skills-icon{
+    height: 70px !important;
+    width: 70px !important;
+  }
+}
+
 
 /* TYPOGRAPHY */
 

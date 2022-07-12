@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
 import { useNavigate, useLocation } from "react-router-dom";
 
-function ProjectCard({title, src, technologies, link}) {
+function ProjectCard({title, src, technologies, link, github}) {
   let navigate = useNavigate();
   const location = useLocation();
   const [ref, inView, entry] = useInView({
@@ -26,7 +26,7 @@ function ProjectCard({title, src, technologies, link}) {
   const handleClick = () => {
     // If we are on home, redirect to detail page. Else do nothing
     if(location.pathname === "/"){
-      navigate(`/project/${title}`, { state: {title, src, technologies, link}})
+      navigate(`/project/${title}`, { state: {title, src, technologies, link, github}})
     }
   }
 
