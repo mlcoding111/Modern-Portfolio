@@ -3,7 +3,7 @@ import styled from "styled-components";
 import ProjectCard from "./ProjectCard";
 
 import { useInView } from "react-intersection-observer";
-import { useViewportScroll, motion, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 import { data } from "./data";
 
