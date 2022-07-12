@@ -25,7 +25,7 @@ function Skills() {
 
       <SkillsShowCase>
       {data.map((item, index) => (
-        <li>
+        <li key={index}>
           <img src={item} alt="React" height={120}/>
         </li>
 
